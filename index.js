@@ -67,32 +67,34 @@
   )
 
   // 去除首页大屏
-  if (document.querySelector(".recommended-swipe.grid-anchor")) document.querySelector(".recommended-swipe.grid-anchor").remove();
-  GM_addStyle(`
-  .recommended-container_floor-aside .container > *:nth-of-type(n + 8) {
-    margin-top: 0px !important;
-  }
-
-  .recommended-container_floor-aside .container.is-version8 > *:nth-of-type(n + 13) {
-    margin-top: 0px !important;
-  }
-
-  @media (max-width: 1139.9px) {
-    .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
+  if (document.querySelector(".recommended-swipe.grid-anchor")) {
+    document.querySelector(".recommended-swipe.grid-anchor").remove();
+    GM_addStyle(`
+    .recommended-container_floor-aside .container > *:nth-of-type(n + 8) {
       margin-top: 0px !important;
     }
-  }
-
-  @media (min-width: 1140px) and (max-width: 1299.9px) {
-    .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
+  
+    .recommended-container_floor-aside .container.is-version8 > *:nth-of-type(n + 13) {
       margin-top: 0px !important;
     }
-  }
-
-  @media (min-width: 1300px) and (max-width: 1399.9px) {
-    .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
-      margin-top: 0px !important;
+  
+    @media (max-width: 1139.9px) {
+      .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
+        margin-top: 0px !important;
+      }
     }
+  
+    @media (min-width: 1140px) and (max-width: 1299.9px) {
+      .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
+        margin-top: 0px !important;
+      }
+    }
+  
+    @media (min-width: 1300px) and (max-width: 1399.9px) {
+      .recommended-container_floor-aside .container>*:nth-of-type(n + 6) {
+        margin-top: 0px !important;
+      }
+    }
+    `);
   }
-  `);
 })();
